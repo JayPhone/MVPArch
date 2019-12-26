@@ -35,6 +35,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
+    //view
+    annotationProcessor library["butterknife-compiler"]
+
     implementation library["appcompat"]
     testImplementation library["junit"]
     androidTestImplementation library["runner"]

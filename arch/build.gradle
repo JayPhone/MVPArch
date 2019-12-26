@@ -30,8 +30,16 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    //view
+    api library["butterknife"]
+
+    //rx
     api library["rxandroid2"]
     api library["rxjava2"]
+
+    //tools
+    api library["dagger2"]
+    annotationProcessor library["dagger2-compiler"]
 
     implementation library["appcompat"]
     testImplementation library["junit"]
