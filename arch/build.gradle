@@ -33,6 +33,12 @@ dependencies {
     //view
     api library["butterknife"]
 
+    //network
+    api library["retrofit"]
+    api library["retrofit-converter-gson"]
+    api library["retrofit-adapter-rxjava2"]
+    api library["okhttp3"]
+
     //rx
     api library["rxandroid2"]
     api library["rxjava2"]

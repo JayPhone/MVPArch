@@ -8,4 +8,17 @@ import dagger.Module;
  */
 @Module
 public class GlobalConfigModule {
+    private GlobalConfigModule(Builder builder) {
+
+    }
+
+    public static final class Builder {
+        private Builder() {
+
+        }
+
+        public void build() {
+            new GlobalConfigModule(this);
+        }
+    }
 }

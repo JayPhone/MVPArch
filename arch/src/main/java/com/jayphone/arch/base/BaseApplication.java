@@ -6,7 +6,7 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 
 import com.jayphone.arch.base.delegate.AppDelegate;
-import com.jayphone.arch.base.delegate.AppLifeCycles;
+import com.jayphone.arch.base.delegate.AppLifecycles;
 import com.jayphone.arch.di.component.AppComponent;
 import com.jayphone.arch.utils.Preconditions;
 
@@ -17,13 +17,13 @@ import com.jayphone.arch.utils.Preconditions;
  * 并提供给开发者使用, 使用本框架开发您的项目, 就意味着您已经拥有一个 MVP + Dagger2 + Retrofit + RxJava 项目
  */
 public class BaseApplication extends Application implements App {
-    private AppLifeCycles mAppDelegate;
+    private AppLifecycles mAppDelegate;
 
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         if (mAppDelegate == null) {
-            mAppDelegate = new AppDelegate();
+            mAppDelegate = new AppDelegate(base);
         }
         mAppDelegate.attachBaseContext(base);
     }
